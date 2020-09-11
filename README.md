@@ -1,2 +1,2 @@
-# lesionsmusculars.github.io
-Web del Congrés de Lesions Musculars
+# www.adhoc-cultura.com
+Web d'Adhoc Cultura
