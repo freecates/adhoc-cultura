@@ -1,5 +1,5 @@
 import base64 from 'base-64';
-import fetch from 'isomorphic-unfetch';
+
 import Head from 'next/head';
 import Link from 'next/link';
 import Observer from 'react-intersection-observer';
@@ -19,7 +19,7 @@ const TwitterIcon = generateShareIcon('twitter');
 const LinkedinIcon = generateShareIcon('linkedin');
 const EmailIcon = generateShareIcon('email');
 
-const BlogContent = props => (
+const BlogContent = (props) => (
   <div>
     <Head>
       <title>{props.contentTitle} - Adhoc Cultura</title>
@@ -272,28 +272,17 @@ const BlogContent = props => (
   </div>
 );
 
-BlogContent.getInitialProps = async function(context) {
+BlogContent.getInitialProps = async function (context) {
   const { path } = context.query;
-  const githubToken = '911edce39abd5244d541bf6b52810bdf664ea34f';
   const res = await fetch(
-    `https://api.github.com/repos/quidcec/quidcec.github.io/contents/${'_' +
-      path +
-      '.md'}?ref=source`,
-    {
-      headers: {
-        Authorization: 'token ' + githubToken,
-      },
-    }
+    `https://api.github.com/repos/quidcec/quidcec.github.io/contents/${
+      '_' + path + '.md'
+    }?ref=source`
   );
   const res2 = await fetch(
-    `https://api.github.com/repos/quidcec/quidcec.github.io/commits?path=${'_' +
-      path +
-      '.md'}`,
-    {
-      headers: {
-        Authorization: 'token ' + githubToken,
-      },
-    }
+    `https://api.github.com/repos/quidcec/quidcec.github.io/commits?path=${
+      '_' + path + '.md'
+    }`
   );
   const adhocmembers = await res.json();
   const commits = await res2.json();
@@ -314,23 +303,11 @@ BlogContent.getInitialProps = async function(context) {
     Math.min(socialText.length, socialText.lastIndexOf(' '))
   );
 
-  const contentImage = text
-    .split('image: ')
-    .pop()
-    .split('\n')
-    .shift();
+  const contentImage = text.split('image: ').pop().split('\n').shift();
 
-  const contentVideoMP4 = text
-    .split('video-mp4: ')
-    .pop()
-    .split('\n')
-    .shift();
+  const contentVideoMP4 = text.split('video-mp4: ').pop().split('\n').shift();
 
-  const contentVideoWEBM = text
-    .split('video-webm: ')
-    .pop()
-    .split('\n')
-    .shift();
+  const contentVideoWEBM = text.split('video-webm: ').pop().split('\n').shift();
 
   const contentVideoPoster = text
     .split('poster-video: ')
@@ -338,11 +315,7 @@ BlogContent.getInitialProps = async function(context) {
     .split('\n')
     .shift();
 
-  const contentTitle = text
-    .split('title: ')
-    .pop()
-    .split('\n')
-    .shift();
+  const contentTitle = text.split('title: ').pop().split('\n').shift();
 
   return {
     contentText,

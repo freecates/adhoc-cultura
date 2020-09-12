@@ -171,13 +171,12 @@ const AdhocEspai = props => (
   </div>
 );
 
-AdhocEspai.getInitialProps = async function() {
+export async function getStaticProps() {
   const res = await fetch(`https://adhocdata.now.sh/espais.json`);
   const espais = await res.json();
-
-  console.log(`Partners data fetched. Count: ${espais.length}`);
-
-  return { espais };
-};
+  return {
+    props: { espais }, // will be passed to the page component as props
+  };
+}
 
 export default AdhocEspai;

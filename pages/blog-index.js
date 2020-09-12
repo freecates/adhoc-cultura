@@ -26,7 +26,7 @@ const BlogIndex = props => (
       <h1>Blog</h1>
       <div>
         <ul className="gallery">
-          {props.blogLists
+        {props.blogLists
             .sort((a, b) => {
               if (a.path < b.path) {
                 return 1
@@ -123,18 +123,14 @@ const BlogIndex = props => (
   </div>
 )
 
-BlogIndex.getInitialProps = async function() {
-  const githubToken = '911edce39abd5244d541bf6b52810bdf664ea34f'
+export async function getStaticProps() {
   const res = await fetch(
-    `https://api.github.com/repos/quidcec/quidcec.github.io/contents/_posts?ref=source`,
-    {
-      headers: {
-        Authorization: 'token ' + githubToken
-      }
-    }
+    `https://api.github.com/repos/quidcec/quidcec.github.io/contents/_posts?ref=source`
   )
   const blogLists = await res.json()
-  return { blogLists }
+  return {
+    props: { blogLists }, // will be passed to the page component as props
+  };
 }
 
 export default BlogIndex

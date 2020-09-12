@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Observer from 'react-intersection-observer';
 
-export default () => (
+const ElNostreMetode = () => (
   <div>
     <Head>
       <title>El nostre mètode | Adhoc Cultura</title>
@@ -114,3 +114,5 @@ export default () => (
     </section>
   </div>
 );
+
+export default ElNostreMetode

@@ -80,13 +80,12 @@ const AdhocContact = props => (
   </div>
 )
 
-AdhocContact.getInitialProps = async function() {
+export async function getStaticProps() {
   const res = await fetch(`https://adhocdata.now.sh/contact.json`)
   const contacts = await res.json()
-
-  console.log(`Membres contact data fetched. Count: ${contacts.length}`)
-
-  return { contacts }
+  return {
+    props: { contacts }, // will be passed to the page component as props
+  };
 }
 
 export default AdhocContact

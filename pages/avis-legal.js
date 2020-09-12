@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 
-export default () => (
+const AvisLegal = () => (
   <div>
     <Head>
       <title>Avís Legal - Adhoc Cultura</title>
@@ -88,3 +88,5 @@ export default () => (
     </section>
   </div>
 );
+
+export default AvisLegal;

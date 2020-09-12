@@ -1,6 +1,5 @@
 import Header from './Header'
 import Footer from './Footer'
-import ServiceWorker from '../pages/service-worker'
 import NavBarDk from './NavBarDk'
 import NavBarMb from './NavBarMb'
 import MediaQuery from 'react-responsive'
@@ -57,7 +56,6 @@ export default class Layout extends React.Component {
           </div>
         }
         <Footer />
-        <ServiceWorker />
       </div>
     )
   }

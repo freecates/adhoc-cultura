@@ -1,4 +1,3 @@
-import fetch from 'isomorphic-unfetch';
 import Head from 'next/head';
 import Link from 'next/link';
 import Observer from 'react-intersection-observer';
@@ -238,11 +237,12 @@ const AdhocTeam = props => (
   </div>
 );
 
-AdhocTeam.getInitialProps = async function() {
+export async function getStaticProps() {
   const res = await fetch(`https://adhocdata.now.sh/equip.json`);
   const adhocmembers = await res.json();
-
-  return { adhocmembers };
-};
+  return {
+    props: { adhocmembers }, // will be passed to the page component as props
+  };
+}
 
 export default AdhocTeam;

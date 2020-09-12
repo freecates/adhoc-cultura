@@ -23,7 +23,7 @@ const MarkerComponent = ({ text }) => <div style={markerStyle}>{text}</div>;
 
 const ZOOM = 16;
 
-export default () => (
+const Home = () => (
   <div>
     <Head>
       <title>
@@ -55,9 +55,7 @@ export default () => (
               </Link>
             </h2>
             <p>
-              <Link href='mailto:info@adhoc-cultura.com'>
-                <a>info@adhoc-cultura.com</a>
-              </Link>
+              <a href='mailto:info@adhoc-cultura.com'>info@adhoc-cultura.com</a>
             </p>
           </Jumbotron>
         </div>
@@ -202,3 +200,5 @@ export default () => (
     </div>
   </div>
 );
+
+export default Home;
