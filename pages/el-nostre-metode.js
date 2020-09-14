@@ -29,7 +29,7 @@ const ElNostreMetode = () => (
           triggerOnce={true}
           render={() => (
             <figure className='fade-in img-metode'>
-              <img src='/static/adhoc-metode.jpg' />
+              <img src='/static/adhoc-metode.jpg' width={'226'} height={'392'} />
             </figure>
           )}
         />

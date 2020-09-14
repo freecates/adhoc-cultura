@@ -46,7 +46,7 @@ const AdhocClient = props => (
               triggerOnce={true}
               render={() => (
                 <figure className='fade-in img-clients'>
-                  <img src={client.logo} />
+                  <img src={client.logo} width={'480'} />
                   <figcaption>
                     <small>{client.name}</small>
                   </figcaption>

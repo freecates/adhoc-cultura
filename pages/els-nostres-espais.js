@@ -53,7 +53,7 @@ const AdhocEspai = props => (
                 triggerOnce={true}
                 render={() => (
                   <figure className='fade-in img-espais'>
-                    <img src={espai.img} />
+                    <img src={espai.img} width={'100%'} />
                     <figcaption>
                       <small>{espai.name}</small>
                     </figcaption>

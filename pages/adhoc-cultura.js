@@ -112,7 +112,7 @@ const AdhocTeam = props => (
                 triggerOnce={true}
                 render={() => (
                   <figure className='fade-in img-team'>
-                    <img src={adhocmember.photo} />
+                    <img src={adhocmember.photo} width={'300'} height={'250'}/>
                     <figcaption>
                       <small>{adhocmember.name}</small>
                     </figcaption>

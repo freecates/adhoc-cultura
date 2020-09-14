@@ -44,7 +44,7 @@ const AdhocService = props => (
               triggerOnce={true}
               render={() => (
                 <figure className='fade-in img-serveis'>
-                  <img src={service.img} />
+                  <img src={service.img} width={'100%'} />
                   <figcaption>
                     <small>{service.name}</small>
                   </figcaption>
