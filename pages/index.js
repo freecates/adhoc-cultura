@@ -5,7 +5,12 @@ import Observer from 'react-intersection-observer';
 import { Jumbotron } from 'reactstrap';
 
 const GoogleMapReact = dynamic(import('google-map-react'), {
+  loading: () => <p>carregant ...</p>
+});
+
+const DynamicModal = dynamic(import('../components/Modal'), {
   loading: () => <p>carregant ...</p>,
+  ssr: false,
 });
 
 const markerStyle = {
@@ -23,7 +28,9 @@ const MarkerComponent = ({ text }) => <div style={markerStyle}>{text}</div>;
 
 const ZOOM = 16;
 
-const Home = () => (
+const Home = () => {  
+
+  return (
   <div>
     <Head>
       <title>
@@ -33,6 +40,7 @@ const Home = () => (
     </Head>
     <div>
       <section className='call-to-action'>
+        <DynamicModal />
         <div className='root'>
           <Jumbotron className='invert'>
             <h1>
@@ -199,6 +207,6 @@ const Home = () => (
       `}</style>
     </div>
   </div>
-);
+)};
 
 export default Home;

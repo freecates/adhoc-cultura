@@ -43,6 +43,7 @@
     "react-responsive": "^4.1.0",
     "react-share": "^1.17.0",
     "react-spring": "^5.9.2",
+    "reactjs-popup": "^2.0.4",
     "reactstrap": "5.0.0-alpha.3",
     "styled-components": "^4.0.0",
     "utf8": "^3.0.0"

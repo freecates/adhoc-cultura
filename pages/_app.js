@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import 'reactjs-popup/dist/index.css';
 import { Transition } from 'react-spring'
 import Layout from '../components/MyLayout'
 
