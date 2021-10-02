@@ -172,7 +172,7 @@ const AdhocEspai = props => (
 );
 
 export async function getStaticProps() {
-  const res = await fetch(`https://adhocdata.now.sh/espais.json`);
+  const res = await fetch(`https://adhocdata.vercel.app/espais.json`);
   const espais = await res.json();
   return {
     props: { espais }, // will be passed to the page component as props

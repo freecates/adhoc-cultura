@@ -238,10 +238,10 @@ const AdhocTeam = props => (
 );
 
 export async function getStaticProps() {
-  const res = await fetch(`https://adhocdata.now.sh/equip.json`);
+  const res = await fetch(`https://adhocdata.vercel.app/equip.json`);
   const adhocmembers = await res.json();
   return {
-    props: { adhocmembers }, // will be passed to the page component as props
+    props: { adhocmembers },
   };
 }
 
