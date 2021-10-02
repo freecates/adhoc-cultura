@@ -145,7 +145,7 @@ const AdhocClient = props => (
 );
 
 export async function getStaticProps() {
-  const res = await fetch(`https://adhocdata.now.sh/clients.json`);
+  const res = await fetch(`https://adhocdata.vercel.app/clients.json`);
   const clients = await res.json();
   return {
     props: { clients }, // will be passed to the page component as props
