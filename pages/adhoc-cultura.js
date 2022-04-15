@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Observer from 'react-intersection-observer';
 import { Jumbotron } from 'reactstrap';
 
-const AdhocTeam = props => (
+const AdhocTeam = (props) => (
   <div>
     <Head>
       <title>Adhoc Cultura</title>
@@ -31,7 +31,8 @@ const AdhocTeam = props => (
               <strong>Missió</strong>
             </h1>
             <h2>
-              Apropar la cultura a la societat com a motor social i cultural
+              Apropar la cultura a la societat com a motor de millora social,
+              perquè les persones puguin gaudir dels seus beneficis
             </h2>
             <h3 className='uppercase'>Visió</h3>
             <h4>
@@ -112,7 +113,7 @@ const AdhocTeam = props => (
                 triggerOnce={true}
                 render={() => (
                   <figure className='fade-in img-team'>
-                    <img src={adhocmember.photo} width={'300'} height={'250'}/>
+                    <img src={adhocmember.photo} width={'300'} height={'250'} />
                     <figcaption>
                       <small>{adhocmember.name}</small>
                     </figcaption>
