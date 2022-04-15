@@ -8,5 +8,5 @@ module.exports =
             runtimeCaching,
             disable: process.env.NODE_ENV === 'development',
         },
-        webpack5: false,
+        swcMinify: true,
     });
