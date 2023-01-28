@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.adhoc-cultura.com/
+
+# Sitemaps
+Sitemap: https://www.adhoc-cultura.com/sitemap.xml
