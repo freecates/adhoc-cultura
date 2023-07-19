@@ -242,6 +242,7 @@ export async function getStaticProps() {
   const adhocmembers = await res.json();
   return {
     props: { adhocmembers },
+    revalidate: 60,
   };
 }
 
